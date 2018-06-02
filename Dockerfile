@@ -15,7 +15,7 @@ RUN apt-get -qq autoclean && apt-get -qq autoremove && apt-get -qq clean
 
 # Create Radsecproxy logging and certs dir
 RUN mkdir /var/log/radsecproxy
-RUN mkdir /etc/radsecproxy/certs
+RUN mkdir -p /etc/radsecproxy/certs
 
 # Export volumes
 VOLUME /var/log/redsecproxy
