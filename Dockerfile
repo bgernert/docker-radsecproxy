@@ -61,4 +61,4 @@ EXPOSE 1813
 ENTRYPOINT ["/sbin/tini", "--"]
 
 # Start Radsecproxy
-CMD ["/usr/sbin/radsecproxy", "-f", "-c", "/etc/radsecproxy.conf"]
+CMD ["/sbin/radsecproxy", "-f", "-c", "/etc/radsecproxy.conf"]
