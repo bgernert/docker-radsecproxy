@@ -51,7 +51,7 @@ RUN mkdir /var/log/radsecproxy
 RUN mkdir -p /etc/radsecproxy/certs
 
 # Export volumes
-VOLUME /var/log/redsecproxy
+VOLUME /var/log/radsecproxy
 
 # Make Radsecproxy's ports available
 EXPOSE 1812
