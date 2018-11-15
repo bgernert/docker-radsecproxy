@@ -39,8 +39,8 @@ FROM alpine:latest
 # Update apk
 RUN apk update
 
-# Install openssl, nettle and tini
-RUN apk add --no-cache openssl nettle tini
+# Install openssl, ca-certificates, nettle and tini
+RUN apk add --no-cache openssl ca-certificates nettle tini
 
 # Copy from 'build' stage
 COPY --from=build /root/output/ /
