@@ -46,6 +46,12 @@ RUN apk add --no-cache openssl ca-certificates nettle tini
 COPY --from=build /root/output/ /
 COPY --from=build /root/radsecproxy.conf-example /etc/radsecproxy.conf
 
+# Copy start.sh
+COPY start.sh /root/start.sh
+
+# Make start.sh executeable
+RUN chmod u+x /root/start.sh
+
 # Create Radsecproxy logging and certs dir
 RUN mkdir /var/log/radsecproxy
 RUN mkdir -p /etc/radsecproxy/certs
@@ -61,4 +67,4 @@ EXPOSE 1813
 ENTRYPOINT ["/sbin/tini", "--"]
 
 # Start Radsecproxy
-CMD ["/sbin/radsecproxy", "-c", "/etc/radsecproxy.conf", "-i", "/run/radsecproxy.pid"]
+CMD ["/root/start.sh"]

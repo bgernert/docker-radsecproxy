@@ -2,7 +2,7 @@
 
 ## Goal of this image
 
-This image provides a Radsecproxy in a Docker container.
+This image provides Radsecproxy in a Docker container.
 
 
 ## Configuration
