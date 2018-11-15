@@ -19,8 +19,8 @@ If you need to provide certificates, you may provide them through '/etc/radsecpr
 ```
 docker build -t docker-radsecproxy .
 docker run -d \
-  -v /path/to/certs:/etc/radsecproxy/certs
-  -v /pat/to/config/file:/etc/radsecproxy.conf:ro
-  -v /path/to/logfiles:/var/log/radsecproxy
+  -v /path/to/certs:/etc/radsecproxy/certs \
+  -v /pat/to/config/file:/etc/radsecproxy.conf:ro \
+  -v /path/to/logfiles:/var/log/radsecproxy \
   docker-radsecproxy
 ```
