@@ -4,8 +4,8 @@ FROM alpine:latest as build
 # Maintainer
 LABEL maintainer="Björn Gernert <mail@bjoern-gernert.de>"
 
-ENV RADSECURL https://github.com/radsecproxy/radsecproxy/releases/download/1.7.2/
-ENV RADSECFILENAME radsecproxy-1.7.2.tar.gz
+ENV RADSECURL https://github.com/radsecproxy/radsecproxy/releases/download/1.8.0/
+ENV RADSECFILENAME radsecproxy-1.8.0.tar.gz
 
 # Change working dir
 WORKDIR /root
@@ -14,7 +14,7 @@ WORKDIR /root
 RUN apk update
 
 # Install buildtools
-RUN apk add --no-cache make g++ openssl-dev nettle-dev
+RUN apk add --no-cache make g++ openssl-dev nettle-dev musl-dev
 
 # Create output dir
 RUN mkdir output
