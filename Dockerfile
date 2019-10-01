@@ -4,8 +4,8 @@ FROM alpine:latest as build
 # Maintainer
 LABEL maintainer="Björn Gernert <mail@bjoern-gernert.de>"
 
-ENV RADSECURL https://github.com/radsecproxy/radsecproxy/releases/download/1.8.0/
-ENV RADSECFILENAME radsecproxy-1.8.0.tar.gz
+ENV RADSECURL https://github.com/radsecproxy/radsecproxy/releases/download/1.8.1/
+ENV RADSECFILENAME radsecproxy-1.8.1.tar.gz
 
 # Change working dir
 WORKDIR /root
